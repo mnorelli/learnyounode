@@ -7,8 +7,8 @@ function callback(response){
   response.setEncoding('utf8');
   response.pipe(bl(function(err,data){
     var stream = data.toString();
-    console.log(stream.length)
     console.log(stream);
+    console.log(stream.length);
   }))
   response.on('error',console.log);
 };
